@@ -1,23 +1,25 @@
 class fetcher {
-    constructor(endpoint) {
-        this.endpoint = endpoint;
-    }
+  #endpoint;
+  constructor(endpoint) {
+    this.#endpoint = endpoint;
+  }
 
-    async checkIfFetched(){
-        let respond = await fetch(this.endpoint);
-        if (respond.status === 200) {
-            console.log(`The endpoint fetched successfully ! ${respond.status}`);
-            console.log(`Endpoint: ${this.endpoint}`);
-        } else {
-            console.log(`could not fetch the endpoint ! Error: ${respond.status}`);
-            console.log(`Endpoint: ${this.endpoint}`);
-        }
+  async checkIfFetched() {
+    try {
+      const response = await fetch(this.#endpoint);
+      if (!response.ok) {
+        throw new Error(`Could not fetch the endpoint! Status: ${response.status}`)
+      }
+      console.log(`✅ Endpoint fetched successfully Status: ${response.status}`);
+      return await response.json();
+    } catch (error) {
+        console.error(`Error fetching ${this.#endpoint}`, error.message);
+        return null;
     }
-
+  }
 }
 
 let fetchapi = new fetcher("https://official-joke-api.appspot.com/random_ten");
 fetchapi.checkIfFetched();
-
 
 // https://official-joke-api.appspot.com/random_ten
