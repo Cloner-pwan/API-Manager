@@ -1,0 +1,76 @@
+{
+  "jokes": [
+    {
+      "id": "1",
+      "type": "general",
+      "setup": "How do hens stay fit?",
+      "punchline": "They always egg-cercise!"
+    },
+    {
+      "id": "2",
+      "type": "general",
+      "setup": "What’s Forest Gump’s Facebook password?",
+      "punchline": "1forest1"
+    },
+    {
+      "id": "3",
+      "type": "general",
+      "setup": "Did you hear about the cow who jumped over the barbed wire fence?",
+      "punchline": "It was udder destruction."
+    },
+    {
+      "id": "4",
+      "type": "general",
+      "setup": "What are the strongest days of the week?",
+      "punchline": "Saturday and Sunday...the rest are weekdays."
+    },
+    {
+      "id": "5",
+      "type": "general",
+      "setup": "What do you call a careful wolf?",
+      "punchline": "Aware wolf."
+    },
+    {
+      "id": "6",
+      "type": "general",
+      "setup": "Why don't you find hippopotamuses hiding in trees?",
+      "punchline": "They're really good at it."
+    },
+    {
+      "id": "7",
+      "type": "general",
+      "setup": "When a dad drives past a graveyard: Did you know that's a popular cemetery?",
+      "punchline": "Yep, people are just dying to get in there"
+    },
+    {
+      "id": "8",
+      "type": "general",
+      "setup": "What do you call a singing Laptop?",
+      "punchline": "A Dell"
+    },
+    {
+      "id": "9",
+      "type": "general",
+      "setup": "What is a vampire's favorite fruit?",
+      "punchline": "A blood orange."
+    },
+    {
+      "id": "10",
+      "type": "general",
+      "setup": "What did the spaghetti say to the other spaghetti?",
+      "punchline": "Pasta la vista, baby!"
+    },
+    {
+      "id": "11",
+      "type": "general",
+      "setup": "well hello world to he oop fuck yeah222 !",
+      "punchline": "Pasta la vista, baby!"
+    },
+    {
+      "id": "12",
+      "type": "general",
+      "setup": "well hello world to he oop fuck yeah222 !",
+      "punchline": "Pasta la vista, baby!"
+    }
+  ]
+}
