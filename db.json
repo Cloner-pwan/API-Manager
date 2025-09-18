@@ -68,9 +68,9 @@
     },
     {
       "id": "12",
-      "type": "general",
-      "setup": "well hello world to he oop fuck yeah222 !",
-      "punchline": "Pasta la vista, baby!"
+      "type": "General",
+      "setup": "say hello to the ?",
+      "punchline": "to the patch"
     }
   ]
 }

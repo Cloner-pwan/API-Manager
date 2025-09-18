@@ -103,7 +103,7 @@ class ApiManager extends fetcher {
     }, 3000);
   }
   // delete is not ready yet
-  async DELETE(id) {
+  async DELETE(any) {
     const config = {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
@@ -116,6 +116,29 @@ class ApiManager extends fetcher {
       throw new Error("No items exist to delete!");
     }
   }
+  async PUT(body = {}, id) {
+    let config = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    };
+    let request = await fetch(`${this.endpoint}/${id}`, config);
+    if (!request.ok) {
+      throw new Error(`Could not PUT ! Status: ${request.status}`);
+    }
+  }
+  // remains
+  async PATCH(body = {}, id) {
+    let config = {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    };
+    let request = await fetch(`${this.endpoint}/${id}`, config);
+    if (!request.ok) {
+      throw new Error(`Could not PATCH Status: ${request.status}`);
+    }
+  }
 }
 
 let api = new ApiManager();
@@ -124,14 +147,15 @@ api.setEndpoint("http://localhost:3000/jokes");
 api.checkIfFetched();
 
 let newJoke = {
-  id: "12",
-  type: "general",
-  setup: "well hello world to he oop fuck yeah222 !",
-  punchline: "Pasta la vista, baby!",
+  type: "General",
+  setup: "say hello to the ?",
+  punchline: "to the patch",
 };
 // await api.POST(newJoke);
 
 // await api.DELETE_byId("11");
+
+await api.PATCH(newJoke, 12);
 
 let data = await api.GET();
 
