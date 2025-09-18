@@ -44,7 +44,7 @@ npm install JSfetcher-cloner
 ```javascript
 import { ApiManager } from "JSfetcher-cloner";
 
-const api = new ApiManager("http://localhost:3000/jokes");
+const api = new ApiManager("endpoint");
 
 // Fetch all data
 const data = await api.GET();
